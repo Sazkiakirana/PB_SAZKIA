@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio Siswa Digital</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Library Excel -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+</head>
+
+<body>
+
+<!-- =====================================================
+     FORM SECTION
+===================================================== -->
+
+<section id="formSection" class="form-section">
+
+    <!-- Background dekorasi -->
+    <div class="background-orb orb-1"></div>
+    <div class="background-orb orb-2"></div>
+    <div class="background-orb orb-3"></div>
+    <div class="background-orb orb-4"></div>
+
+    <div class="container">
+
+        <div class="form-header">
+
+            <div class="badge">
+                ✦ DIGITAL STUDENT PORTFOLIO
+            </div>
+
+            <h1>
+                Buat Portfolio
+                <span>Keren & Profesional</span>
+            </h1>
+
+            <p>
+                Masukkan data diri kamu untuk membuat
+                portfolio digital yang modern, menarik,
+                dan siap dicetak.
+            </p>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <form id="portfolioForm">
+
+            <div class="form-title">
+
+                <div class="form-icon">
+                    👨‍🎓
+                </div>
+
+                <div>
+                    <h2>
+                        Data Siswa
+                    </h2>
+
+                    <p>
+                        Lengkapi informasi berikut
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="form-grid">
+
+                <!-- Nama -->
+                <div class="form-group">
+
+                    <label for="nama">
+                        Nama Lengkap
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nama"
+                        placeholder="Masukkan nama lengkap"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- NIS -->
+                <div class="form-group">
+
+                    <label for="nis">
+                        NIS
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nis"
+                        placeholder="Masukkan NIS"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Kelas -->
+                <div class="form-group">
+
+                    <label for="kelas">
+                        Kelas
+                    </label>
+
+                    <input
+                        type="text"
+                        id="kelas"
+                        placeholder="Contoh: XI RPL 1"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Jurusan -->
+                <div class="form-group">
+
+                    <label for="jurusan">
+                        Jurusan
+                    </label>
+
+                    <select
+                        id="jurusan"
+                        required
+                    >
+
+                        <option value="">
+                            -- Pilih Jurusan --
+                        </option>
+
+                        <option value="RPL - Rekayasa Perangkat Lunak">
+                            RPL - Rekayasa Perangkat Lunak
+                        </option>
+
+                        <option value="DKV - Desain Komunikasi Visual">
+                            DKV - Desain Komunikasi Visual
+                        </option>
+
+                        <option value="PSPT - Produksi dan Siaran Program Televisi">
+                            PSPT - Produksi dan Siaran Program Televisi
+                        </option>
+
+                        <option value="PEKSOS - Pekerjaan Sosial">
+                            PEKSOS - Pekerjaan Sosial
+                        </option>
+
+                        <option value="TKJ - Teknik Komputer dan Jaringan">
+                            TKJ - Teknik Komputer dan Jaringan
+                        </option>
+
+                        <option value="ANIMASI">
+                            ANIMASI
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Sekolah -->
+                <div class="form-group">
+
+                    <label for="sekolah">
+                        Nama Sekolah
+                    </label>
+
+                    <input
+                        type="text"
+                        id="sekolah"
+                        placeholder="Masukkan nama sekolah"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Email -->
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="nama@email.com"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Alamat -->
+                <div class="form-group full">
+
+                    <label for="alamat">
+                        Alamat
+                    </label>
+
+                    <input
+                        type="text"
+                        id="alamat"
+                        placeholder="Masukkan alamat lengkap"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Tentang -->
+                <div class="form-group full">
+
+                    <label for="tentang">
+                        Tentang Saya
+                    </label>
+
+                    <textarea
+                        id="tentang"
+                        rows="5"
+                        placeholder="Ceritakan tentang diri kamu..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Keahlian -->
+                <div class="form-group full">
+
+                    <label for="keahlian">
+                        Keahlian
+                    </label>
+
+                    <input
+                        type="text"
+                        id="keahlian"
+                        placeholder="Contoh: HTML, CSS, JavaScript, Photoshop"
+                        required
+                    >
+
+                    <small>
+                        Pisahkan keahlian dengan koma.
+                    </small>
+
+                </div>
+
+
+                <!-- Karya -->
+                <div class="form-group full">
+
+                    <label for="karya">
+                        Karya / Project
+                    </label>
+
+                    <textarea
+                        id="karya"
+                        rows="5"
+                        placeholder="Contoh: Website Sekolah, Aplikasi Kasir, Desain Poster"
+                        required
+                    ></textarea>
+
+                    <small>
+                        Pisahkan karya dengan koma.
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn btn-create"
+            >
+                🚀 BUAT PORTFOLIO
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PORTFOLIO
+===================================================== -->
+
+<section
+    id="portfolioSection"
+    class="portfolio-section"
+    style="display:none;"
+>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <div class="logo">
+
+                <span>MY</span>
+                <strong>PORTFOLIO</strong>
+
+            </div>
+
+
+            <div class="nav-buttons">
+
+                <button
+                    id="editButton"
+                    class="btn btn-secondary"
+                >
+                    ✏ Edit
+                </button>
+
+
+                <button
+                    id="printButton"
+                    class="btn btn-primary"
+                >
+                    🖨 Cetak
+                </button>
+
+
+                <button
+                    id="excelButton"
+                    class="btn btn-excel"
+                >
+                    📊 Excel
+                </button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <div class="hero-text">
+
+                    <span class="hero-label">
+                        ✦ STUDENT PORTFOLIO
+                    </span>
+
+                    <h1>
+                        Halo,
+                        Saya
+                        <span id="displayNama">
+                            Nama Siswa
+                        </span>
+                    </h1>
+
+                    <h2 id="displayJurusan">
+                        Jurusan
+                    </h2>
+
+                    <p id="displayTentang">
+                        Tentang saya akan tampil di sini.
+                    </p>
+
+
+                    <div class="hero-info">
+
+                        <span>
+                            🎓
+                            <span id="displaySekolah">
+                                Nama Sekolah
+                            </span>
+                        </span>
+
+                        <span>
+                            📚
+                            <span id="displayKelas">
+                                Kelas
+                            </span>
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROFILE CARD -->
+
+                <div class="profile-card">
+
+                    <div class="avatar">
+
+                        <span id="avatarInitial">
+                            S
+                        </span>
+
+                    </div>
+
+
+                    <h3 id="cardNama">
+                        Nama Siswa
+                    </h3>
+
+
+                    <p id="cardJurusan">
+                        Jurusan
+                    </p>
+
+
+                    <div class="card-line"></div>
+
+
+                    <div class="card-info">
+
+                        <div>
+
+                            <span>
+                                NIS
+                            </span>
+
+                            <strong id="cardNis">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Kelas
+                            </span>
+
+                            <strong id="cardKelas">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Sekolah
+                            </span>
+
+                            <strong id="cardSekolah">
+                                -
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- BIODATA -->
+
+    <section class="content-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>
+                    01
+                </span>
+
+                <div>
+
+                    <small>
+                        PROFILE
+                    </small>
+
+                    <h2>
+                        Biodata Saya
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="biodata-card">
+
+                <div class="biodata-item">
+
+                    <span>
+                        Nama Lengkap
+                    </span>
+
+                    <strong id="bioNama">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="biodata-item">
+
+                    <span>
+                        NIS
+                    </span>
+
+                    <strong id="bioNis">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="biodata-item">
+
+                    <span>
+                        Kelas
+                    </span>
+
+                    <strong id="bioKelas">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="biodata-item">
+
+                    <span>
+                        Jurusan
+                    </span>
+
+                    <strong id="bioJurusan">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="biodata-item">
+
+                    <span>
+                        Sekolah
+                    </span>
+
+                    <strong id="bioSekolah">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="biodata-item">
+
+                    <span>
+                        Email
+                    </span>
+
+                    <strong id="bioEmail">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="biodata-item full">
+
+                    <span>
+                        Alamat
+                    </span>
+
+                    <strong id="bioAlamat">
+                        -
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- TENTANG -->
+
+    <section class="about-section">
+
+        <div class="container">
+
+            <div class="about-box">
+
+                <div class="about-icon">
+                    💡
+                </div>
+
+                <div>
+
+                    <small>
+                        ABOUT ME
+                    </small>
+
+                    <h2>
+                        Tentang Saya
+                    </h2>
+
+                    <p id="aboutText">
+                        -
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- KEAHLIAN -->
+
+    <section class="content-section skills-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>
+                    02
+                </span>
+
+                <div>
+
+                    <small>
+                        SKILLS
+                    </small>
+
+                    <h2>
+                        Keahlian Saya
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="skillsContainer"
+                class="skills-container"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PROJECT -->
+
+    <section class="content-section project-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>
+                    03
+                </span>
+
+                <div>
+
+                    <small>
+                        PORTFOLIO
+                    </small>
+
+                    <h2>
+                        Karya & Project
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="projectContainer"
+                class="project-grid"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-logo">
+                ✦
+            </div>
+
+            <h2 id="footerNama">
+                Nama Siswa
+            </h2>
+
+            <p>
+                Student Digital Portfolio
+            </p>
+
+            <div class="footer-line"></div>
+
+            <p class="copyright">
+
+                ©
+                <span id="year"></span>
+
+                Student Portfolio.
+                All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
